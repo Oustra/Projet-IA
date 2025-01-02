@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\begin{document}
+	\title{Rapport Projet IA}
+	\author{MOTTET Valentin, FENNASSI Oussama}
+	\date{\today}
+	\maketitle
+	
+	\textbf{Lien GitLab:} \url{https://gitlab.univ-nantes.fr/E248670T/isolation-game-prjet}
+	
+	\section{Questions Préliminaires}
+	
+	\begin{enumerate}
+		\item Une partie peut-elle se terminer par un match nul ? Pourquoi ? 
+		\\
+		
+		Non car la vérification, si un joueur a perdu, se fait tour par tour.
+		\\
+		
+		\item Caractérisez le jeu en termes de (i) son information disponible ; (ii) son caractère aléatoire.
+		\\
+		
+		(i) Isolation est un jeu à information parfaite, chaque joueur a accès à tout les mouvements possible durant toute la partie.
+		
+		(ii) Isolation est un jeu déterministe, il n'y a pas de hasard durant les parties.
+		\\
+		
+		\item Exprimez une borne supérieure sur la complexité de l’espace des états du jeu (c-à-d le nombre de positions possibles pour le jeu) en fonction de n.
+		\\
+		
+		rep?
+		\\
+		
+		\item Le facteur de branchement moyen d’un jeu est le nombre moyen de branches filles pour chaque noeud parent de l’arbre d’état du jeu. Donnez une estimation (même grossière) du facteur de branchement moyen pour ce jeu.
+		\\
+		
+		rep?
+		\\
+		\item Que peut-on en conclure ?
+		\\
+		
+		rep?
+		\\
+	
+	\end{enumerate}
+	
+	
+	\section{Explication des Parties réalisés}
+	
+	\subsection{Partie 1}
+	
+	
+	\textbf{Implémentation de Stratégie Random:}
+	Utilisation de la fonction get\_legal\_full\_moves qui renvoie la liste des tuples de move possible puis on fait un choix random dans cette liste.
+	
+	\noindent\textbf{Fichier evaluate:} On a fait 2 fonction d'évaluation, une avec l'UI et l'autre sans. Elle prennent en paramètre les 2 stratégie à comparer, la taille du plateau de jeu et le nombre de parties à effectuer. Pour chaque partie on alterne la stratégie qui commence. On créer ensuite une partie avec Game(), puis on récupère le perdant avec le current player, enfin on incrémente le compteur de la stratégie gagnante.
+	
+	
+	
+	
+\end{document}
